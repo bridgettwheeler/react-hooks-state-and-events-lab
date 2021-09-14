@@ -3,14 +3,10 @@ import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
 
 function App() {
-
-  function Toggle() {
-    const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(false);
 
     function handleClick() {
       setIsOn((isOn) => !isOn);
-    }
-    
   }
   const appClass = isOn ? "App dark" : "App light"
 
