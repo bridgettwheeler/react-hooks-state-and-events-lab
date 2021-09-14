@@ -6,10 +6,13 @@ function ShoppingList({ items }) {
 
   function handleFilterChange(event) {
     setFilterBy(event.target.value)
-  }
 
-
-
+    const foodsToDisplay = items.filter((item) => {
+      if (filterBy === {item.category}) {
+        return this.item;
+      
+    };
+  
   return (
     <div className="ShoppingList">
       <div className="Filter">
@@ -21,9 +24,7 @@ function ShoppingList({ items }) {
         </select>
       </div>
       <ul className="Items">
-        {items.map((item) => (
-          <Item key={item.id} name={item.name} category={item.category} />
-        ))}
+        {items.map((item) => (<Item key={item.id} name={item.name} category={item.category} />))}
       </ul>
     </div>
   );

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 function Item({ name, category }) {
     const [isClicked, setIsOn] = useState(false);
 
+    console.log(name, category)
+
     function handleClick() {
       setIsOn((isClicked) => !isClicked);
     }
