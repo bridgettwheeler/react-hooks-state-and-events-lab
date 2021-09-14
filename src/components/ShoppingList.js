@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
-  const [filterBy, setFilterBy] = useState("Filter by category")
+  const [filterBy, setFilterBy] = useState("All")
 
   function handleFilterChange(event) {
     setFilterBy(event.target.value)
 
     const foodsToDisplay = items.filter((item) => {
-      if (filterBy === {item.category}) {
-        return this.item;
-      
-    };
+      if (filterBy === "All") {
+        return true
+      } else {
+        return item.category === filterBy
+      }
+    });
   
   return (
     <div className="ShoppingList">
@@ -30,4 +32,5 @@ function ShoppingList({ items }) {
   );
 }
 
+}
 export default ShoppingList;
